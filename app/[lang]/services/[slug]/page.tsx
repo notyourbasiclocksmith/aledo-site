@@ -60,18 +60,37 @@ export default function ServiceDetailPage({ params }: { params: { lang: Locale; 
     '@type': 'Service',
     name: name,
     description: desc,
+    url: `${baseUrl}/${lang}/${svcBase}/${isEn ? service.slug : service.slugEs}`,
     provider: {
       '@type': 'Locksmith',
       name: 'Aledo Locksmith',
       telephone: CALL_NUMBER,
-      areaServed: { '@type': 'City', name: 'Aledo, TX' },
+      email: 'contact@aledolocksmith.net',
+      address: { '@type': 'PostalAddress', addressLocality: 'Aledo', addressRegion: 'TX', addressCountry: 'US' },
     },
     areaServed: { '@type': 'City', name: 'Aledo, TX' },
+    serviceType: 'Locksmith Services',
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: `${baseUrl}/${lang}/${svcBase}/${isEn ? service.slug : service.slugEs}`,
+      availableLanguage: isEn ? 'en' : 'es',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isEn ? 'Home' : 'Inicio', item: `${baseUrl}/${lang}` },
+      { '@type': 'ListItem', position: 2, name: isEn ? 'Services' : 'Servicios', item: `${baseUrl}/${lang}/${svcBase}` },
+      { '@type': 'ListItem', position: 3, name: name },
+    ],
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="bg-gradient-to-br from-primary to-secondary text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
