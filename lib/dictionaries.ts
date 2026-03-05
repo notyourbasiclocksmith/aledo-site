@@ -3,7 +3,7 @@ export const dictionaries = {
     meta: {
       siteName: 'Aledo Locksmith',
       defaultTitle: 'Locksmith in Aledo, TX | 24/7 Emergency Service',
-      defaultDescription: 'Professional locksmith services in Aledo, TX. Emergency lockouts, lock changes, rekeying & more. Fast response within 10 miles. Call (817) 993-5323.',
+      defaultDescription: 'Professional locksmith services in Aledo, TX. Emergency lockouts, lock changes, rekeying & more. Fast response within 10 miles. Call (817) 634-5045.',
     },
     nav: {
       home: 'Home',
@@ -72,7 +72,7 @@ export const dictionaries = {
       title: 'Frequently Asked Questions',
       items: [
         { q: 'What areas do you serve?', a: 'We serve Aledo, TX and nearby areas within a 10-mile radius, including Willow Park, Annetta, Hudson Oaks, and Walsh.' },
-        { q: 'Are you available 24/7?', a: 'Yes! We offer 24/7 emergency locksmith services. Call us anytime at (817) 993-5323.' },
+        { q: 'Are you available 24/7?', a: 'Yes! We offer 24/7 emergency locksmith services. Call us anytime at (817) 634-5045.' },
         { q: 'How fast can you get to me?', a: 'We typically arrive within 20-30 minutes for locations in the Aledo area.' },
         { q: 'Do you provide upfront pricing?', a: 'Absolutely. We always give you a clear quote before starting any work — no surprises.' },
         { q: 'Can you rekey my locks?', a: 'Yes, we offer lock rekeying services for residential and commercial properties so you don\'t need to replace the entire lock.' },
@@ -143,7 +143,7 @@ export const dictionaries = {
     meta: {
       siteName: 'Cerrajero en Aledo',
       defaultTitle: 'Cerrajero en Aledo, TX | Servicio de Emergencia 24/7',
-      defaultDescription: 'Servicios profesionales de cerrajería en Aledo, TX. Aperturas de emergencia, cambio de cerraduras, rekey y más. Respuesta rápida. Llame al (817) 993-5323.',
+      defaultDescription: 'Servicios profesionales de cerrajería en Aledo, TX. Aperturas de emergencia, cambio de cerraduras, rekey y más. Respuesta rápida. Llame al (817) 634-5045.',
     },
     nav: {
       home: 'Inicio',
@@ -212,7 +212,7 @@ export const dictionaries = {
       title: 'Preguntas Frecuentes',
       items: [
         { q: '¿Qué áreas cubren?', a: 'Servimos Aledo, TX y áreas cercanas dentro de un radio de 10 millas, incluyendo Willow Park, Annetta, Hudson Oaks y Walsh.' },
-        { q: '¿Están disponibles las 24 horas?', a: '¡Sí! Ofrecemos servicio de cerrajería de emergencia 24/7. Llámenos al (817) 993-5323 a cualquier hora.' },
+        { q: '¿Están disponibles las 24 horas?', a: '¡Sí! Ofrecemos servicio de cerrajería de emergencia 24/7. Llámenos al (817) 634-5045 a cualquier hora.' },
         { q: '¿Qué tan rápido pueden llegar?', a: 'Generalmente llegamos en 20-30 minutos para ubicaciones en el área de Aledo.' },
         { q: '¿Ofrecen precios por adelantado?', a: 'Absolutamente. Siempre le damos una cotización clara antes de comenzar cualquier trabajo.' },
         { q: '¿Pueden hacer rekey de cerraduras?', a: 'Sí, ofrecemos servicio de rekey para propiedades residenciales y comerciales para que no necesite reemplazar toda la cerradura.' },

@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
   return {
     title: isEn ? 'Contact Aledo Locksmith | Aledo, TX' : 'Contactar Aledo Locksmith | Aledo, TX',
     description: isEn
-      ? 'Contact Aledo Locksmith for fast locksmith service in Aledo, TX. Call (817) 993-5323 or text (817) 586-9634. Available 24/7.'
-      : 'Contacte a Aledo Locksmith para servicio rápido en Aledo, TX. Llame al (817) 993-5323 o envíe mensaje al (817) 586-9634. Disponible 24/7.',
+      ? 'Contact Aledo Locksmith for fast locksmith service in Aledo, TX. Call (817) 634-5045 or text (817) 586-9634. Available 24/7.'
+      : 'Contacte a Aledo Locksmith para servicio rápido en Aledo, TX. Llame al (817) 634-5045 o envíe mensaje al (817) 586-9634. Disponible 24/7.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'contact' : 'contacto'}`,
       languages: { en: `${baseUrl}/en/contact`, es: `${baseUrl}/es/contacto`, 'x-default': `${baseUrl}/en/contact` },

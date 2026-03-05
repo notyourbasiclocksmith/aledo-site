@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
   return {
     title: isEn ? 'Locksmith Services in Aledo, TX' : 'Servicios de Cerrajería en Aledo, TX',
     description: isEn
-      ? 'Full range of locksmith services in Aledo, TX. Emergency lockouts, lock changes, rekeying, and more. Call (817) 993-5323.'
-      : 'Servicios completos de cerrajería en Aledo, TX. Aperturas de emergencia, cambio de cerraduras, rekey y más. Llame al (817) 993-5323.',
+      ? 'Full range of locksmith services in Aledo, TX. Emergency lockouts, lock changes, rekeying, and more. Call (817) 634-5045.'
+      : 'Servicios completos de cerrajería en Aledo, TX. Aperturas de emergencia, cambio de cerraduras, rekey y más. Llame al (817) 634-5045.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'services' : 'servicios'}`,
       languages: { en: `${baseUrl}/en/services`, es: `${baseUrl}/es/servicios`, 'x-default': `${baseUrl}/en/services` },

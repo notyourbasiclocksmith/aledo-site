@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
   return {
     title: isEn ? 'About Aledo Locksmith | Aledo, TX' : 'Acerca de Aledo Locksmith | Aledo, TX',
     description: isEn
-      ? 'Learn about Aledo Locksmith — your trusted local locksmith in Aledo, TX. Licensed, insured, bilingual. Call (817) 993-5323.'
-      : 'Conozca a Aledo Locksmith — su cerrajero local de confianza en Aledo, TX. Licenciado, asegurado, bilingüe. Llame al (817) 993-5323.',
+      ? 'Learn about Aledo Locksmith — your trusted local locksmith in Aledo, TX. Licensed, insured, bilingual. Call (817) 634-5045.'
+      : 'Conozca a Aledo Locksmith — su cerrajero local de confianza en Aledo, TX. Licenciado, asegurado, bilingüe. Llame al (817) 634-5045.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'about' : 'acerca'}`,
       languages: { en: `${baseUrl}/en/about`, es: `${baseUrl}/es/acerca`, 'x-default': `${baseUrl}/en/about` },

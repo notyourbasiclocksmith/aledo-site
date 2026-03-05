@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
   return {
     title: isEn ? 'Service Area | Locksmith Near Aledo, TX' : 'Área de Servicio | Cerrajero Cerca de Aledo, TX',
     description: isEn
-      ? 'Aledo Locksmith serves a 10-mile radius around Aledo, TX including Willow Park, Annetta, Hudson Oaks & Walsh. Call (817) 993-5323.'
-      : 'Aledo Locksmith sirve un radio de 10 millas alrededor de Aledo, TX incluyendo Willow Park, Annetta, Hudson Oaks y Walsh. Llame al (817) 993-5323.',
+      ? 'Aledo Locksmith serves a 10-mile radius around Aledo, TX including Willow Park, Annetta, Hudson Oaks & Walsh. Call (817) 634-5045.'
+      : 'Aledo Locksmith sirve un radio de 10 millas alrededor de Aledo, TX incluyendo Willow Park, Annetta, Hudson Oaks y Walsh. Llame al (817) 634-5045.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'service-area' : 'area-de-servicio'}`,
       languages: { en: `${baseUrl}/en/service-area`, es: `${baseUrl}/es/area-de-servicio`, 'x-default': `${baseUrl}/en/service-area` },

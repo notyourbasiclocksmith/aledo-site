@@ -5,8 +5,8 @@ export const defaultLocale: Locale = 'en'
 
 export const baseUrl = 'https://aledolocksmith.net'
 
-export const CALL_NUMBER = '+18179935323'
-export const CALL_DISPLAY = '(817) 993-5323'
+export const CALL_NUMBER = '+18176345045'
+export const CALL_DISPLAY = '(817) 634-5045'
 export const TEXT_NUMBER = '+18175869634'
 export const TEXT_DISPLAY = '(817) 586-9634'
 

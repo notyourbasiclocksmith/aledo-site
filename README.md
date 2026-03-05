@@ -43,7 +43,7 @@ Static output is written to the `out/` directory.
 ## Key Configuration
 
 - **Domain:** https://aledolocksmith.net
-- **Call:** (817) 993-5323
+- **Call:** (817) 634-5045
 - **Text:** (817) 586-9634
 - **Service Radius:** 10 miles around Aledo, TX
 
