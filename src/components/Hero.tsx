@@ -1,4 +1,5 @@
-import { Phone, Clock, MapPin, Shield } from 'lucide-react';
+import { Phone, Shield, Zap, DollarSign, MessageSquare, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
 import { business } from '@/data/business';
 
 interface HeroProps {
@@ -38,25 +39,36 @@ export default function Hero({ title, subtitle, showBadges = true }: HeroProps) 
             {subtitle}
           </p>
 
+          {/* Tagline */}
+          {showBadges && (
+            <p className="text-base md:text-lg text-gray-400 font-medium mb-8">
+              Fast Response &bull; 24/7 Emergency &bull; Serving Within 10 Miles of Aledo
+            </p>
+          )}
+
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a href={business.phoneHref} className="btn-primary text-center">
               <Phone className="w-5 h-5 mr-2" />
-              Call Now — {business.phone}
+              Call Now: {business.phone}
             </a>
-            <a href="/contact" className="btn-outline text-center">
-              Request Service Online
+            <a href={business.textHref} className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl transition-colors text-center">
+              <MessageSquare className="w-5 h-5" />
+              Text Us
             </a>
+            <Link href="/contact" className="btn-outline text-center">
+              Get a Quote
+            </Link>
           </div>
 
           {/* Trust badges */}
           {showBadges && (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { icon: Clock, label: '24/7 Service' },
-                { icon: MapPin, label: 'Mobile — We Come to You' },
-                { icon: Shield, label: 'Licensed & Insured' },
-                { icon: Phone, label: 'Fast Response Time' },
+                { icon: Shield, label: 'Licensed' },
+                { icon: ShieldCheck, label: 'Insured' },
+                { icon: Zap, label: 'Fast Response' },
+                { icon: DollarSign, label: 'Upfront Pricing' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2.5 text-gray-400 text-sm">
                   <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0">

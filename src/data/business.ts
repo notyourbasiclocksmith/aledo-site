@@ -1,8 +1,9 @@
 export const business = {
   name: 'Aledo Locksmith',
   legalName: 'Aledo Locksmith',
-  phone: '(817) 555-0199',
-  phoneHref: 'tel:+18175550199',
+  phone: '(817) 634-5045',
+  phoneHref: 'tel:+18176345045',
+  textHref: 'sms:+18176345045',
   email: 'info@aledolocksmith.net',
   website: 'https://aledolocksmith.net',
   address: {
