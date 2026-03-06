@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import { CALL_NUMBER, CALL_DISPLAY, TEXT_NUMBER, FORMS_ENDPOINT, type Locale } from '@/lib/i18n'
 import { serviceOptionsEn, serviceOptionsEs } from '@/lib/services'
 import { type Dictionary } from '@/lib/dictionaries'
@@ -9,13 +12,40 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ lang, dict, compact = false }: ContactFormProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState('')
   const serviceOptions = lang === 'en' ? serviceOptionsEn : serviceOptionsEs
+  const thankYouPath = lang === 'en' ? '/en/thank-you' : '/es/gracias'
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError('')
+
+    try {
+      const formData = new FormData(e.currentTarget)
+      const response = await fetch(FORMS_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (response.ok) {
+        window.location.href = thankYouPath
+      } else {
+        setError(lang === 'en' ? 'Something went wrong. Please try again.' : 'Algo salió mal. Por favor intente de nuevo.')
+      }
+    } catch {
+      setError(lang === 'en' ? 'Something went wrong. Please try again.' : 'Algo salió mal. Por favor intente de nuevo.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   const inputClasses = 'w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all text-dark-gray bg-white min-h-[48px]'
   const labelClasses = 'block text-sm font-medium text-gray-700 mb-1.5'
 
   return (
-    <form action={FORMS_ENDPOINT} method="POST" className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div className={compact ? 'grid grid-cols-1 sm:grid-cols-2 gap-4' : 'space-y-5'}>
         <div>
           <label htmlFor="name" className={labelClasses}>{dict.form.name} *</label>
@@ -48,11 +78,18 @@ export default function ContactForm({ lang, dict, compact = false }: ContactForm
         <textarea id="message" name="message" required rows={compact ? 3 : 4} className={`${inputClasses} resize-none`} placeholder={dict.form.messagePlaceholder} aria-required="true" />
       </div>
 
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm" role="alert">
+          {error}
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl transition-all text-lg min-h-[56px]"
+        disabled={isSubmitting}
+        className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed text-lg min-h-[56px]"
       >
-        {dict.form.submit}
+        {isSubmitting ? dict.form.sending : dict.form.submit}
       </button>
 
       <p className="text-sm text-gray-500 text-center">
