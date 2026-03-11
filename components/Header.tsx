@@ -1,10 +1,59 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone, MessageSquare, Globe } from 'lucide-react'
+import { Menu, X, Phone, MessageSquare, Globe, ChevronDown } from 'lucide-react'
 import { CALL_NUMBER, CALL_DISPLAY, TEXT_NUMBER, TEXT_DISPLAY, type Locale } from '@/lib/i18n'
 import { type Dictionary } from '@/lib/dictionaries'
+
+const serviceGroups = {
+  en: [
+    { label: 'Core Locksmith', items: [
+      { name: 'Car Lockout', slug: 'car-lockout' },
+      { name: 'Car Key Replacement', slug: 'car-key-replacement' },
+      { name: 'Key Fob Programming', slug: 'key-fob-programming' },
+      { name: 'Transponder Key Programming', slug: 'transponder-key-programming' },
+      { name: 'Ignition Repair & Replacement', slug: 'ignition-repair' },
+    ]},
+    { label: 'Advanced Programming', items: [
+      { name: 'ECU & Computer Programming', slug: 'ecu-programming' },
+      { name: 'Smart Key & Keyless Entry', slug: 'smart-key-programming' },
+      { name: 'Module Programming (ECM/TCM/BCM)', slug: 'module-programming' },
+      { name: 'Airbag Reset & Crash Module', slug: 'airbag-reset-crash-module' },
+      { name: 'Performance Tuning', slug: 'performance-tuning' },
+    ]},
+    { label: 'European & Specialty', items: [
+      { name: 'Mercedes ELV Steering Lock', slug: 'mercedes-elv-steering-lock-repair' },
+      { name: 'BMW FRM Module Repair', slug: 'bmw-frm-repair' },
+      { name: 'Dodge/Chrysler WIN & FOBIK', slug: 'dodge-chrysler-win-module' },
+      { name: 'GM VATS Bypass', slug: 'gm-vats-bypass' },
+      { name: 'VW IMMO OFF', slug: 'vw-immo-off' },
+    ]},
+  ],
+  es: [
+    { label: 'Cerrajería Principal', items: [
+      { name: 'Apertura de Auto', slug: 'apertura-de-auto' },
+      { name: 'Reemplazo de Llave de Auto', slug: 'reemplazo-de-llave-de-auto' },
+      { name: 'Programación de Control Remoto', slug: 'programacion-de-control-remoto' },
+      { name: 'Programación de Llave Transponder', slug: 'programacion-de-llave-transponder' },
+      { name: 'Reparación de Ignición', slug: 'reparacion-de-ignicion' },
+    ]},
+    { label: 'Programación Avanzada', items: [
+      { name: 'Programación de ECU', slug: 'programacion-de-ecu' },
+      { name: 'Llave Inteligente', slug: 'programacion-de-llave-inteligente' },
+      { name: 'Programación de Módulos', slug: 'programacion-de-modulos' },
+      { name: 'Reseteo de Airbag', slug: 'reseteo-de-airbag-y-modulo-de-choque' },
+      { name: 'Afinación de Rendimiento', slug: 'afinacion-de-rendimiento' },
+    ]},
+    { label: 'Europeos y Especialidad', items: [
+      { name: 'Mercedes ELV', slug: 'reparacion-de-cerradura-de-direccion-mercedes-elv' },
+      { name: 'BMW FRM', slug: 'reparacion-de-modulo-frm-bmw' },
+      { name: 'Dodge/Chrysler WIN y FOBIK', slug: 'modulo-win-dodge-chrysler' },
+      { name: 'GM VATS Bypass', slug: 'bypass-de-vats-gm' },
+      { name: 'VW IMMO OFF', slug: 'inmovilizador-off-vw' },
+    ]},
+  ],
+}
 
 interface HeaderProps {
   lang: Locale
@@ -13,13 +62,27 @@ interface HeaderProps {
 
 export default function Header({ lang, dict }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
   const prefix = `/${lang}`
   const altLang = lang === 'en' ? 'es' : 'en'
   const altPrefix = `/${altLang}`
+  const svcBase = lang === 'en' ? 'services' : 'servicios'
+  const groups = serviceGroups[lang]
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   const navLinks = [
     { href: prefix, label: dict.nav.home },
-    { href: `${prefix}/${lang === 'en' ? 'services' : 'servicios'}`, label: dict.nav.services },
     { href: `${prefix}/${lang === 'en' ? 'service-area' : 'area-de-servicio'}`, label: dict.nav.serviceArea },
     { href: `${prefix}/${lang === 'en' ? 'about' : 'acerca'}`, label: dict.nav.about },
     { href: `${prefix}/${lang === 'en' ? 'contact' : 'contacto'}`, label: dict.nav.contact },
@@ -44,7 +107,56 @@ export default function Header({ lang, dict }: HeaderProps) {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
-            {navLinks.map((link) => (
+            <Link href={prefix} className="text-sm font-medium text-gray-200 hover:text-white transition-colors">
+              {dict.nav.home}
+            </Link>
+
+            {/* Services Dropdown */}
+            <div
+              ref={dropdownRef}
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="text-sm font-medium text-gray-200 hover:text-white transition-colors flex items-center gap-1"
+              >
+                {dict.nav.services}
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[540px] bg-white rounded-xl shadow-2xl border border-gray-100 py-3 z-50">
+                  <Link
+                    href={`${prefix}/${svcBase}`}
+                    className="block px-5 py-2.5 text-primary font-bold hover:bg-gray-50 transition border-b border-gray-100 text-sm"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    {lang === 'en' ? 'All Services' : 'Todos los Servicios'} &rarr;
+                  </Link>
+                  <div className="grid grid-cols-3 gap-0 pt-1">
+                    {groups.map((group) => (
+                      <div key={group.label} className="px-3 py-2">
+                        <div className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 px-2">{group.label}</div>
+                        {group.items.map((item) => (
+                          <Link
+                            key={item.slug}
+                            href={`${prefix}/${svcBase}/${item.slug}`}
+                            className="block px-2 py-1.5 text-gray-700 hover:text-primary hover:bg-gray-50 rounded text-xs transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {navLinks.slice(1).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -116,7 +228,52 @@ export default function Header({ lang, dict }: HeaderProps) {
 
             {/* Mobile Nav Links */}
             <nav className="flex flex-col" aria-label="Mobile navigation">
-              {navLinks.map((link) => (
+              <Link
+                href={prefix}
+                onClick={() => setIsOpen(false)}
+                className="py-3 px-2 text-base font-medium text-gray-200 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+              >
+                {dict.nav.home}
+              </Link>
+
+              {/* Mobile Services Accordion */}
+              <div>
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-200 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  <span>{dict.nav.services}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isMobileServicesOpen && (
+                  <div className="ml-3 border-l-2 border-secondary/30 pl-3 mb-2">
+                    <Link
+                      href={`${prefix}/${svcBase}`}
+                      className="block py-1.5 text-accent font-bold text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {lang === 'en' ? 'All Services' : 'Todos los Servicios'} &rarr;
+                    </Link>
+                    {groups.map((group) => (
+                      <div key={group.label} className="mt-2">
+                        <div className="text-xs font-bold text-secondary/70 uppercase tracking-wider mb-1">{group.label}</div>
+                        {group.items.map((item) => (
+                          <Link
+                            key={item.slug}
+                            href={`${prefix}/${svcBase}/${item.slug}`}
+                            className="block py-1 text-gray-300 hover:text-white text-sm"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {navLinks.slice(1).map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
