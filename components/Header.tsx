@@ -127,30 +127,32 @@ export default function Header({ lang, dict }: HeaderProps) {
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[540px] bg-white rounded-xl shadow-2xl border border-gray-100 py-3 z-50">
-                  <Link
-                    href={`${prefix}/${svcBase}`}
-                    className="block px-5 py-2.5 text-primary font-bold hover:bg-gray-50 transition border-b border-gray-100 text-sm"
-                    onClick={() => setIsServicesOpen(false)}
-                  >
-                    {lang === 'en' ? 'All Services' : 'Todos los Servicios'} &rarr;
-                  </Link>
-                  <div className="grid grid-cols-3 gap-0 pt-1">
-                    {groups.map((group) => (
-                      <div key={group.label} className="px-3 py-2">
-                        <div className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 px-2">{group.label}</div>
-                        {group.items.map((item) => (
-                          <Link
-                            key={item.slug}
-                            href={`${prefix}/${svcBase}/${item.slug}`}
-                            className="block px-2 py-1.5 text-gray-700 hover:text-primary hover:bg-gray-50 rounded text-xs transition-colors"
-                            onClick={() => setIsServicesOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    ))}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                  <div className="w-[540px] bg-white rounded-xl shadow-2xl border border-gray-100 py-3">
+                    <Link
+                      href={`${prefix}/${svcBase}`}
+                      className="block px-5 py-2.5 text-primary font-bold hover:bg-gray-50 transition border-b border-gray-100 text-sm"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {lang === 'en' ? 'All Services' : 'Todos los Servicios'} &rarr;
+                    </Link>
+                    <div className="grid grid-cols-3 gap-0 pt-1">
+                      {groups.map((group) => (
+                        <div key={group.label} className="px-3 py-2">
+                          <div className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 px-2">{group.label}</div>
+                          {group.items.map((item) => (
+                            <Link
+                              key={item.slug}
+                              href={`${prefix}/${svcBase}/${item.slug}`}
+                              className="block px-2 py-1.5 text-gray-700 hover:text-primary hover:bg-gray-50 rounded text-xs transition-colors"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
