@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, MessageSquare, Shield, Zap } from 'lucide-react'
 import { dictionaries } from '@/lib/dictionaries'
 import { services } from '@/lib/services'
@@ -12,10 +13,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const isEn = params.lang === 'en'
   return {
-    title: isEn ? 'Locksmith Services in Aledo, TX' : 'Servicios de Cerrajería en Aledo, TX',
+    title: isEn ? 'Automotive Locksmith Services in Aledo, TX' : 'Servicios de Cerrajería Automotriz en Aledo, TX',
     description: isEn
-      ? 'Full range of locksmith services in Aledo, TX. Emergency lockouts, lock changes, rekeying, and more. Call (817) 634-5045.'
-      : 'Servicios completos de cerrajería en Aledo, TX. Aperturas de emergencia, cambio de cerraduras, rekey y más. Llame al (817) 634-5045.',
+      ? 'Complete automotive locksmith services in Aledo, TX. Car lockouts, key replacement, fob programming, ignition repair & more. Call (817) 634-5045.'
+      : 'Servicios completos de cerrajería automotriz en Aledo, TX. Aperturas de auto, reemplazo de llaves, programación de controles y más. Llame al (817) 634-5045.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'services' : 'servicios'}`,
       languages: { en: `${baseUrl}/en/services`, es: `${baseUrl}/es/servicios`, 'x-default': `${baseUrl}/en/services` },
@@ -47,8 +48,14 @@ export default function ServicesPage({ params }: { params: { lang: Locale } }) {
                 href={`${prefix}/${svcBase}/${lang === 'en' ? service.slug : service.slugEs}`}
                 className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30"
               >
-                <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
-                  <Shield className="w-7 h-7" />
+                <div className="relative w-full h-40 rounded-xl overflow-hidden mb-4">
+                  <Image
+                    src={service.image}
+                    alt={lang === 'en' ? `${service.name} service in Aledo TX` : `Servicio de ${service.nameEs} en Aledo TX`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 <h2 className="text-lg font-bold text-dark-gray mb-2 group-hover:text-secondary transition-colors">
                   {lang === 'en' ? service.name : service.nameEs}

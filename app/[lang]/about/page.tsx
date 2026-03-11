@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Phone, MessageSquare, Shield, Zap, Star, Users } from 'lucide-react'
 import { dictionaries } from '@/lib/dictionaries'
 import { baseUrl, CALL_NUMBER, CALL_DISPLAY, TEXT_NUMBER, TEXT_DISPLAY, type Locale } from '@/lib/i18n'
@@ -10,10 +11,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const isEn = params.lang === 'en'
   return {
-    title: isEn ? 'About Aledo Locksmith | Aledo, TX' : 'Acerca de Aledo Locksmith | Aledo, TX',
+    title: isEn ? 'About Aledo Locksmith | Automotive Locksmith in Aledo, TX' : 'Acerca de Aledo Locksmith | Cerrajero Automotriz en Aledo, TX',
     description: isEn
-      ? 'Learn about Aledo Locksmith — your trusted local locksmith in Aledo, TX. Licensed, insured, bilingual. Call (817) 634-5045.'
-      : 'Conozca a Aledo Locksmith — su cerrajero local de confianza en Aledo, TX. Licenciado, asegurado, bilingüe. Llame al (817) 634-5045.',
+      ? 'Learn about Aledo Locksmith — your trusted automotive locksmith in Aledo, TX. Car lockouts, key replacement, fob programming. Licensed, insured, bilingual. Call (817) 634-5045.'
+      : 'Conozca a Aledo Locksmith — su cerrajero automotriz de confianza en Aledo, TX. Aperturas de auto, reemplazo de llaves, programación de controles. Licenciado, asegurado, bilingüe. Llame al (817) 634-5045.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'about' : 'acerca'}`,
       languages: { en: `${baseUrl}/en/about`, es: `${baseUrl}/es/acerca`, 'x-default': `${baseUrl}/en/about` },
@@ -28,8 +29,16 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-16 overflow-hidden">
+        <Image
+          src="/images/mobile-locksmith-service-van-aledo-tx.png"
+          alt={lang === 'en' ? 'Aledo Locksmith mobile service van in Aledo TX' : 'Van de servicio m\u00f3vil de Aledo Locksmith en Aledo TX'}
+          fill
+          className="object-cover opacity-15"
+          priority
+          sizes="100vw"
+        />
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{dict.about.h1}</h1>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto">{dict.about.intro}</p>
         </div>
@@ -37,14 +46,36 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-dark-gray mb-4">{dict.about.mission}</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">{dict.about.missionText}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <h2 className="text-2xl font-bold text-dark-gray mb-4">{dict.about.mission}</h2>
+              <p className="text-gray-700 text-lg leading-relaxed">{dict.about.missionText}</p>
+            </div>
+            <div className="relative h-64 md:h-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/mobile-locksmith-service-van-aledo-tx.png"
+                alt={lang === 'en' ? 'Mobile automotive locksmith van serving Aledo TX' : 'Van m\u00f3vil de cerrajero automotriz sirviendo Aledo TX'}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
           </div>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-dark-gray mb-4">{dict.about.whyLocal}</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">{dict.about.whyLocalText}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="relative h-64 md:h-auto rounded-2xl overflow-hidden shadow-lg order-2 md:order-1">
+              <Image
+                src="/images/automotive-locksmith-mobile-workshop-aledo-tx.png"
+                alt={lang === 'en' ? 'Professional key programming workstation inside mobile unit' : 'Estaci\u00f3n profesional de programaci\u00f3n de llaves dentro de unidad m\u00f3vil'}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-2xl font-bold text-dark-gray mb-4">{dict.about.whyLocal}</h2>
+              <p className="text-gray-700 text-lg leading-relaxed">{dict.about.whyLocalText}</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

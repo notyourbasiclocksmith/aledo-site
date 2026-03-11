@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Phone, MessageSquare, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import { dictionaries } from '@/lib/dictionaries'
@@ -11,10 +12,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const isEn = params.lang === 'en'
   return {
-    title: isEn ? 'Contact Aledo Locksmith | Aledo, TX' : 'Contactar Aledo Locksmith | Aledo, TX',
+    title: isEn ? 'Contact Aledo Locksmith | Automotive Locksmith Aledo, TX' : 'Contactar Aledo Locksmith | Cerrajero Automotriz Aledo, TX',
     description: isEn
-      ? 'Contact Aledo Locksmith for fast locksmith service in Aledo, TX. Call (817) 634-5045 or text (817) 586-9634. Available 24/7.'
-      : 'Contacte a Aledo Locksmith para servicio rápido en Aledo, TX. Llame al (817) 634-5045 o envíe mensaje al (817) 586-9634. Disponible 24/7.',
+      ? 'Contact Aledo Locksmith for fast automotive locksmith service in Aledo, TX. Car lockouts, key replacement, fob programming. Call (817) 634-5045 or text (817) 586-9634.'
+      : 'Contacte a Aledo Locksmith para servicio de cerrajería automotriz rápido en Aledo, TX. Aperturas de auto, llaves, controles. Llame al (817) 634-5045 o envíe mensaje al (817) 586-9634.',
     alternates: {
       canonical: `${baseUrl}/${params.lang}/${isEn ? 'contact' : 'contacto'}`,
       languages: { en: `${baseUrl}/en/contact`, es: `${baseUrl}/es/contacto`, 'x-default': `${baseUrl}/en/contact` },
@@ -41,8 +42,16 @@ export default function ContactPage({ params }: { params: { lang: Locale } }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-16 overflow-hidden">
+        <Image
+          src="/images/locksmith-delivering-car-keys-customer-aledo-tx.png"
+          alt={lang === 'en' ? 'Locksmith delivering car keys to happy customer in Aledo TX' : 'Cerrajero entregando llaves de auto a cliente satisfecho en Aledo TX'}
+          fill
+          className="object-cover opacity-15"
+          priority
+          sizes="100vw"
+        />
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{dict.contact.h1}</h1>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto">{dict.contact.subtitle}</p>
         </div>

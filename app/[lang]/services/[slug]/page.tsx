@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, MessageSquare, ArrowLeft, CheckCircle } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import { dictionaries } from '@/lib/dictionaries'
@@ -69,7 +70,7 @@ export default function ServiceDetailPage({ params }: { params: { lang: Locale; 
       address: { '@type': 'PostalAddress', addressLocality: 'Aledo', addressRegion: 'TX', addressCountry: 'US' },
     },
     areaServed: { '@type': 'City', name: 'Aledo, TX' },
-    serviceType: 'Locksmith Services',
+    serviceType: 'Automotive Locksmith Services',
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: `${baseUrl}/${lang}/${svcBase}/${isEn ? service.slug : service.slugEs}`,
@@ -92,8 +93,16 @@ export default function ServiceDetailPage({ params }: { params: { lang: Locale; 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-16 overflow-hidden">
+        <Image
+          src={service.image}
+          alt={isEn ? `${name} service in Aledo TX` : `Servicio de ${name} en Aledo TX`}
+          fill
+          className="object-cover opacity-15"
+          priority
+          sizes="100vw"
+        />
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
           <Link href={`${prefix}/${svcBase}`} className="inline-flex items-center gap-1 text-gray-300 hover:text-white text-sm mb-4 transition-colors">
             <ArrowLeft className="w-4 h-4" /> {isEn ? 'All Services' : 'Todos los Servicios'}
           </Link>
@@ -106,6 +115,15 @@ export default function ServiceDetailPage({ params }: { params: { lang: Locale; 
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
+          <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-10 shadow-lg">
+            <Image
+              src={service.image}
+              alt={isEn ? `${name} - automotive locksmith Aledo TX` : `${name} - cerrajero automotriz Aledo TX`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 896px"
+            />
+          </div>
           <div className="prose max-w-none">
             <p className="text-gray-700 text-lg leading-relaxed mb-8">{desc}</p>
 
