@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/en/about/`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/en/contact/`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/en/locksmith-near-me/`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${baseUrl}/en/faq/`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ]
 
   const staticEs: MetadataRoute.Sitemap = [
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/es/acerca/`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/es/contacto/`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/es/cerrajero-cerca-de-mi/`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${baseUrl}/es/preguntas-frecuentes/`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ]
 
   const serviceEn: MetadataRoute.Sitemap = services.map((s) => ({

@@ -1,0 +1,90 @@
+# Aledo Locksmith
+
+> Professional mobile automotive locksmith serving Aledo, TX and nearby areas within a 10-mile radius. Licensed, insured, available 24/7. Bilingual service (English and Spanish).
+
+## Contact Information
+- Business Name: Aledo Locksmith
+- Phone (Call): (817) 634-5045
+- Phone (Text): (817) 586-9634
+- Location: Aledo, TX 76008
+- Service Area: 10-mile radius around Aledo, TX (including Willow Park, Annetta, Hudson Oaks, Walsh)
+- Hours: 24/7 including holidays
+- Languages: English, Spanish
+- Website: https://aledolocksmith.net
+
+## Core Services
+- Car Lockout: Emergency vehicle lockout service, non-damaging entry for all makes and models
+- Car Key Replacement: On-site key cutting and programming for lost or broken car keys
+- Key Fob Programming: Remote and key fob programming for all vehicle brands
+- Transponder Key Programming: Chip key programming for vehicle immobilizer systems
+- Ignition Repair & Replacement: On-site ignition cylinder repair and replacement
+- Emergency Car Locksmith (24/7): Round-the-clock emergency automotive locksmith response
+- Trunk Lockout: Non-damaging trunk access when keys are locked inside
+- Broken Car Key Extraction: Safe removal of broken key fragments from locks and ignitions
+- Duplicate Car Keys: On-site spare key cutting and programming
+
+## Advanced Automotive Programming Services
+- ECU & Computer Programming: Engine Control Unit reflashing, replacement programming, VIN coding, and immobilizer sync for all makes and models
+- Smart Key & Keyless Entry: Proximity smart key and push-to-start fob programming, all-keys-lost service
+- ECM/TCM/BCM/ABS Module Programming: Control module setup, VIN writing, parameter configuration using dealer-level J2534 and OEM tools
+- Airbag Reset & Crash Module Repair: SRS airbag module crash data clearing and restoration to factory condition after collisions
+- Performance Tuning & ECU Remapping: Custom ECU tuning for horsepower, torque, fuel economy gains on gas and diesel vehicles
+
+## European & Specialty Vehicle Services
+- Mercedes ELV Steering Lock Repair: Electronic Steering Lock repair and replacement for Mercedes-Benz W204, W207, W212 models
+- BMW FRM Footwell Module Repair: Circuit board repair and reprogramming for BMW FRM/FRM3 modules
+- Saab Steering Lock Bypass: Permanent steering column lock bypass for Saab 9-3 and 9-5 vehicles
+- GM VATS Bypass & Disable: Vehicle Anti-Theft System bypass for Chevrolet, Pontiac, Buick, Cadillac, Oldsmobile
+- Dodge/Chrysler WIN Module & FOBIK: Wireless Ignition Node replacement and FOBIK key programming
+- Dodge/Chrysler VIN Swap & Programming: VIN writing to replacement PCM, BCM, and instrument clusters using wiTECH
+- VW Immobilizer Off (IMMO OFF): Immobilizer delete for Volkswagen and Audi ECU swaps, race builds, and all-keys-lost scenarios
+
+## Service Details
+- Mobile service: We come to your location (home, work, parking lot, roadside)
+- Response time: Typically 20-30 minutes in the Aledo area
+- No tow needed: All services performed on-site
+- Pricing: Upfront quotes before work begins, no hidden fees
+- Equipment: Dealer-level diagnostic tools, J2534 pass-through programming, OEM manufacturer software subscriptions
+
+## Pages
+- [Homepage](https://aledolocksmith.net/en/)
+- [All Services](https://aledolocksmith.net/en/services/)
+- [Locksmith Near Me](https://aledolocksmith.net/en/locksmith-near-me/)
+- [Service Area](https://aledolocksmith.net/en/service-area/)
+- [About](https://aledolocksmith.net/en/about/)
+- [Contact](https://aledolocksmith.net/en/contact/)
+- [Página Principal (Español)](https://aledolocksmith.net/es/)
+- [Servicios (Español)](https://aledolocksmith.net/es/servicios/)
+- [Cerrajero Cerca de Mí](https://aledolocksmith.net/es/cerrajero-cerca-de-mi/)
+
+## Frequently Asked Questions
+
+### What areas does Aledo Locksmith serve?
+We serve Aledo, TX and nearby areas within a 10-mile radius, including Willow Park, Annetta, Annetta North, Annetta South, Hudson Oaks, Walsh, and parts of Weatherford and western Fort Worth. ZIP codes: 76008, 76087, 76086.
+
+### Is Aledo Locksmith available 24/7?
+Yes. We offer 24/7 emergency automotive locksmith services, including holidays. Call (817) 634-5045 anytime.
+
+### How fast can Aledo Locksmith get to me?
+Our average response time is 20-30 minutes for locations in the Aledo, TX area.
+
+### Can you make car keys without the original key?
+Yes. We can create new car keys from scratch using your vehicle's VIN and our professional key cutting and programming equipment. No original key or dealer visit needed.
+
+### Do you work on all car brands?
+Yes. We service all major brands including Ford, Chevy, Toyota, Honda, Nissan, BMW, Mercedes-Benz, Audi, Volkswagen, Dodge, Chrysler, Jeep, Ram, Hyundai, Kia, Subaru, Lexus, Infiniti, Acura, and more.
+
+### How much does a car locksmith cost in Aledo?
+Pricing varies by service and vehicle. Car lockouts start at a lower rate; key programming and ECU services vary by vehicle complexity. We always provide an upfront quote before work begins — no hidden fees.
+
+### Do you program smart keys and key fobs?
+Yes. We program all types of smart keys, proximity fobs, FOBIK keys, and keyless entry remotes on-site for all major vehicle brands.
+
+### Can you program ECU and control modules?
+Yes. We provide dealer-level ECU programming, module configuration (ECM, TCM, BCM, ABS), VIN writing, and immobilizer synchronization for all makes and models using J2534 and OEM tools.
+
+### Do you speak Spanish?
+Yes. We are a fully bilingual team — hablamos español. Our entire website is also available in Spanish at https://aledolocksmith.net/es/
+
+### Do I need to tow my car to a dealer?
+No. Our mobile service comes to your location with all necessary tools and equipment. We perform all services on-site — no tow needed.
