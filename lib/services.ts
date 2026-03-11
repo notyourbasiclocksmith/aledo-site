@@ -9,6 +9,11 @@ export interface Service {
   descriptionEs: string
   icon: string
   image: string
+  features?: string[]
+  featuresEs?: string[]
+  detailedContent?: string[]
+  detailedContentEs?: string[]
+  relatedSlugs?: string[]
 }
 
 export const services: Service[] = [
@@ -131,6 +136,33 @@ export const services: Service[] = [
     descriptionEs: 'Nuestro servicio de programación de ECU (Unidad de Control del Motor) cubre todo, desde reprogramar software de fábrica hasta programar módulos de reemplazo. Ya sea que necesite una nueva ECU sincronizada con el inmovilizador de su vehículo, una ECU usada codificada a su VIN, o limpieza de fallas diagnósticas, nuestros técnicos tienen herramientas y experiencia de nivel concesionario. Manejamos todas las marcas y modelos en el lugar en Aledo, TX y dentro de un radio de 10 millas.',
     icon: 'Cpu',
     image: '/images/smart-key-diagnostic-tablet-aledo-tx.png',
+    features: [
+      'New & used ECU programming and VIN coding',
+      'Factory software reflashing and updates',
+      'Immobilizer synchronization after ECU swap',
+      'Diagnostic trouble code (DTC) clearing',
+      'All makes and models — domestic, import, and European',
+      'On-site mobile service, no tow needed',
+    ],
+    featuresEs: [
+      'Programación de ECU nueva y usada con codificación de VIN',
+      'Actualización y reprogramación de software de fábrica',
+      'Sincronización de inmovilizador después de cambio de ECU',
+      'Limpieza de códigos de diagnóstico (DTC)',
+      'Todas las marcas y modelos — domésticos, importados y europeos',
+      'Servicio móvil en el lugar, sin necesidad de grúa',
+    ],
+    detailedContent: [
+      'The ECU is the brain of your vehicle — it manages fuel injection, ignition timing, emissions controls, and communicates with the immobilizer to verify your key. When this module needs replacement due to electrical failure, water damage, or a software glitch, the new unit must be programmed specifically for your vehicle. This involves writing your VIN into the module, configuring operational parameters, and synchronizing it with your car\'s security system so your keys are recognized.',
+      'Many shops and even some dealers send ECU programming work out to third parties, adding days of delay and extra cost. Our technicians carry dealer-level J2534 pass-through programming tools and manufacturer-specific diagnostic software right in our mobile unit. We perform the entire process on-site — from module installation to final verification — typically in under two hours. This saves you the expense of a tow truck and the inconvenience of leaving your car at a shop for days.',
+      'Common situations that require ECU programming include replacing a failed engine computer, installing a used or refurbished ECU from a donor vehicle, updating outdated software to fix known manufacturer bugs, and clearing hard fault codes after a major repair. We also handle cases where a vehicle has been reflashed incorrectly by another shop, causing driveability issues, check engine lights, or failed emissions testing.',
+    ],
+    detailedContentEs: [
+      'La ECU es el cerebro de su vehículo — gestiona la inyección de combustible, el tiempo de ignición, los controles de emisiones y se comunica con el inmovilizador para verificar su llave. Cuando este módulo necesita reemplazo por falla eléctrica, daño por agua o un error de software, la nueva unidad debe ser programada específicamente para su vehículo. Esto incluye escribir su VIN en el módulo, configurar parámetros operacionales y sincronizarlo con el sistema de seguridad del auto.',
+      'Muchos talleres e incluso algunos concesionarios envían el trabajo de programación de ECU a terceros, agregando días de retraso y costo adicional. Nuestros técnicos llevan herramientas de programación J2534 de nivel concesionario y software de diagnóstico específico del fabricante directamente en nuestra unidad móvil. Realizamos todo el proceso en el lugar — desde la instalación del módulo hasta la verificación final — generalmente en menos de dos horas.',
+      'Las situaciones comunes que requieren programación de ECU incluyen reemplazar una computadora de motor fallida, instalar una ECU usada o reacondicionada, actualizar software obsoleto para corregir errores conocidos del fabricante, y limpiar códigos de falla persistentes después de una reparación mayor. También manejamos casos donde un vehículo fue reprogramado incorrectamente por otro taller.',
+    ],
+    relatedSlugs: ['module-programming', 'performance-tuning', 'vw-immo-off', 'smart-key-programming'],
   },
   {
     slug: 'smart-key-programming',
@@ -143,6 +175,33 @@ export const services: Service[] = [
     descriptionEs: 'Los vehículos modernos usan llaves inteligentes y controles de proximidad para entrada sin llave y encendido por botón. Si su llave inteligente se perdió, se dañó o necesita reemplazo, programamos nuevas en el lugar usando el equipo más reciente. Soportamos todas las marcas principales incluyendo Toyota, Honda, Nissan, Hyundai, Kia, Ford y marcas de lujo. Servicio móvil disponible en Aledo, TX y áreas cercanas — rápido, conveniente y significativamente más económico que el concesionario.',
     icon: 'Smartphone',
     image: '/images/car-smart-key-system-aledo-tx.png',
+    features: [
+      'Proximity smart key programming for push-to-start vehicles',
+      'Keyless entry remote and fob pairing',
+      'All-keys-lost smart key creation from scratch',
+      'Battery replacement and reprogramming',
+      'Support for Toyota, Honda, Nissan, Hyundai, Kia, Ford, BMW, Mercedes & more',
+      'On-site service — significantly cheaper than the dealership',
+    ],
+    featuresEs: [
+      'Programación de llave inteligente de proximidad para vehículos con encendido por botón',
+      'Emparejamiento de entrada sin llave y control remoto',
+      'Creación de llave inteligente desde cero cuando se pierden todas las llaves',
+      'Reemplazo de batería y reprogramación',
+      'Soporte para Toyota, Honda, Nissan, Hyundai, Kia, Ford, BMW, Mercedes y más',
+      'Servicio en el lugar — significativamente más económico que el concesionario',
+    ],
+    detailedContent: [
+      'Smart keys use radio-frequency identification (RFID) and short-range wireless communication to let you unlock and start your car without physically inserting a key. The vehicle detects the smart key in your pocket or purse, unlocks the doors when you touch the handle, and allows the engine to start at the push of a button. While incredibly convenient, these systems are complex — and when a smart key is lost, damaged, or the battery dies at the wrong time, you need a specialist who understands the technology.',
+      'Our smart key programming process begins with a full diagnostic scan of your vehicle\'s keyless entry and immobilizer system. We then program a new OEM-quality smart key or proximity fob to your vehicle using manufacturer-specific protocols. For all-keys-lost situations, we perform a complete system reset and program new keys from scratch — a process that typically takes 30 to 90 minutes depending on the vehicle make and model.',
+      'Dealerships often charge $300 to $600 or more for a single smart key replacement, plus the inconvenience of towing your vehicle there and waiting days for parts. Our mobile service eliminates all of that — we come to your location in Aledo, TX with the key blanks, programming equipment, and expertise to get you driving again the same day, typically at 30-50% less than dealer pricing.',
+    ],
+    detailedContentEs: [
+      'Las llaves inteligentes usan identificación por radiofrecuencia (RFID) y comunicación inalámbrica de corto alcance para permitirle desbloquear y arrancar su auto sin insertar físicamente una llave. El vehículo detecta la llave inteligente en su bolsillo o bolso, desbloquea las puertas al tocar la manija y permite encender el motor con solo presionar un botón. Si bien es increíblemente conveniente, estos sistemas son complejos — y cuando una llave inteligente se pierde, daña o la batería se agota en el momento equivocado, necesita un especialista.',
+      'Nuestro proceso de programación de llave inteligente comienza con un escaneo diagnóstico completo del sistema de entrada sin llave e inmovilizador de su vehículo. Luego programamos una nueva llave inteligente de calidad OEM usando protocolos específicos del fabricante. Para situaciones donde se perdieron todas las llaves, realizamos un reinicio completo del sistema y programamos llaves nuevas desde cero — un proceso que típicamente toma de 30 a 90 minutos.',
+      'Los concesionarios frecuentemente cobran $300 a $600 o más por un solo reemplazo de llave inteligente, más la inconveniencia de remolcar su vehículo y esperar días por partes. Nuestro servicio móvil elimina todo eso — vamos a su ubicación en Aledo, TX con las llaves, equipo de programación y experiencia para ponerlo a manejar el mismo día, típicamente a 30-50% menos que el precio del concesionario.',
+    ],
+    relatedSlugs: ['key-fob-programming', 'transponder-key-programming', 'car-key-replacement', 'ecu-programming'],
   },
   {
     slug: 'module-programming',
@@ -155,6 +214,33 @@ export const services: Service[] = [
     descriptionEs: 'Cuando un módulo de control de un vehículo falla o necesita reemplazo, debe ser programado para comunicarse con el resto de los sistemas del auto. Programamos Módulos de Control del Motor (ECM), Módulos de Control de Transmisión (TCM), Módulos de Control de Carrocería (BCM), y módulos ABS para todos los años, marcas y modelos. Nuestro equipo de nivel concesionario maneja escritura de VIN, configuración de parámetros e inicialización de módulos. Servicio en Aledo, TX y el área circundante.',
     icon: 'Cpu',
     image: '/images/mobile-key-programming-workstation-aledo-tx.png',
+    features: [
+      'Engine Control Module (ECM) programming and VIN writing',
+      'Transmission Control Module (TCM) initialization and adaptation',
+      'Body Control Module (BCM) configuration and key learning',
+      'ABS module programming and calibration',
+      'Parameter setup for new and used replacement modules',
+      'Dealer-level J2534 and OEM tools for all manufacturers',
+    ],
+    featuresEs: [
+      'Programación de Módulo de Control del Motor (ECM) y escritura de VIN',
+      'Inicialización y adaptación de Módulo de Control de Transmisión (TCM)',
+      'Configuración de Módulo de Control de Carrocería (BCM) y aprendizaje de llaves',
+      'Programación y calibración de módulo ABS',
+      'Configuración de parámetros para módulos nuevos y usados',
+      'Herramientas J2534 y OEM de nivel concesionario para todos los fabricantes',
+    ],
+    detailedContent: [
+      'Modern vehicles rely on a network of electronic control modules that communicate over CAN bus, LIN bus, and other protocols. The ECM manages the engine, the TCM controls transmission shifting, the BCM handles lights, locks, windows, and other body functions, and the ABS module manages anti-lock braking. When any of these modules fails and needs replacement, the new module arrives as a blank slate — it must be programmed with the vehicle\'s VIN, configured with the correct parameters for that specific year, make, and trim level, and initialized so it can communicate with all other modules on the network.',
+      'This type of programming is sometimes called "module setup and configuration" or "SPS (Service Programming System)" depending on the manufacturer. Ford calls it FDRS, GM uses TIS2Web/SPS, Chrysler/Stellantis uses wiTECH, and so on. Each requires specialized subscription access and hardware. Our technicians maintain current subscriptions to all major OEM programming platforms, so we can handle any domestic, Asian, or European vehicle without sending you to the dealer.',
+      'A common scenario is a body shop or independent mechanic who has physically installed a replacement module but cannot program it. We regularly partner with repair shops throughout the Aledo area to provide module programming services they cannot perform in-house. Whether you\'re a shop needing programming support or a vehicle owner dealing with a failed module, we provide fast, professional service at your location.',
+    ],
+    detailedContentEs: [
+      'Los vehículos modernos dependen de una red de módulos de control electrónico que se comunican a través de CAN bus, LIN bus y otros protocolos. El ECM gestiona el motor, el TCM controla los cambios de transmisión, el BCM maneja luces, cerraduras, ventanas y otras funciones, y el módulo ABS gestiona el frenado antibloqueo. Cuando cualquiera de estos módulos falla y necesita reemplazo, el nuevo módulo llega en blanco — debe ser programado con el VIN del vehículo, configurado con los parámetros correctos para ese año, marca y nivel de equipamiento específico.',
+      'Este tipo de programación a veces se llama "configuración de módulo" o "SPS (Sistema de Programación de Servicio)" dependiendo del fabricante. Ford lo llama FDRS, GM usa TIS2Web/SPS, Chrysler/Stellantis usa wiTECH, y así sucesivamente. Cada uno requiere acceso de suscripción especializado y hardware. Nuestros técnicos mantienen suscripciones actuales a todas las plataformas principales de programación OEM.',
+      'Un escenario común es un taller de carrocería o mecánico independiente que ha instalado físicamente un módulo de reemplazo pero no puede programarlo. Regularmente nos asociamos con talleres de reparación en el área de Aledo para proporcionar servicios de programación de módulos que no pueden realizar internamente. Ya sea que usted sea un taller que necesita soporte de programación o un propietario de vehículo con un módulo fallido, proporcionamos servicio rápido y profesional en su ubicación.',
+    ],
+    relatedSlugs: ['ecu-programming', 'airbag-reset-crash-module', 'dodge-chrysler-vin-swap', 'bmw-frm-repair'],
   },
   {
     slug: 'airbag-reset-crash-module',
@@ -167,6 +253,33 @@ export const services: Service[] = [
     descriptionEs: 'Después de una colisión, el módulo de control de airbag de su vehículo almacena datos de choque y códigos de falla que mantienen la luz de advertencia SRS encendida. En lugar de comprar un módulo nuevo costoso del concesionario, podemos resetear su módulo existente limpiando los datos de choque y restaurándolo a condición de fábrica. Este servicio funciona en prácticamente todas las marcas y modelos. Servicio rápido y móvil en Aledo, TX y áreas cercanas.',
     icon: 'Shield',
     image: '/images/automotive-locksmith-mobile-workshop-aledo-tx.png',
+    features: [
+      'SRS airbag module crash data clearing',
+      'Hard and soft DTC code removal',
+      'Module restored to factory pre-crash condition',
+      'Works on all vehicle makes and models',
+      'Saves $500-$1,500+ vs. dealer module replacement',
+      'Fast turnaround — same-day mobile service available',
+    ],
+    featuresEs: [
+      'Limpieza de datos de choque del módulo de airbag SRS',
+      'Eliminación de códigos DTC duros y suaves',
+      'Módulo restaurado a condición de fábrica pre-choque',
+      'Funciona en todas las marcas y modelos',
+      'Ahorra $500-$1,500+ vs. reemplazo del módulo en concesionario',
+      'Servicio rápido — servicio móvil el mismo día disponible',
+    ],
+    detailedContent: [
+      'When your vehicle is involved in a collision — even a minor fender bender — the airbag control module (also called the SRS module or crash sensor) records the event. It stores crash data, deployment records (if airbags fired), and sets hard fault codes. Even after the vehicle is repaired and airbags are replaced, the SRS warning light stays on because the module still contains this crash history. In most states, including Texas, the SRS light must be off for the vehicle to pass inspection.',
+      'The dealership solution is to replace the entire module — typically costing $800 to $2,000+ including parts and programming. Our reset service is a fraction of that cost. We connect to your airbag module using specialized SRS diagnostic tools, read the stored crash data and fault codes, clear the crash record, and restore the module to its original factory state. The result is a module that functions identically to a brand-new unit, with the SRS light off and all systems operational.',
+      'This service is especially valuable for body shops, insurance repair facilities, and vehicle owners working on collision-damaged cars. We handle all major airbag module manufacturers including Bosch, Continental, TRW, Autoliv, Denso, and more. Whether your vehicle had a minor fender bender or a more serious collision (where airbags deployed), we can reset your module as long as it is not physically damaged. Mobile service available throughout Aledo, TX and the surrounding area.',
+    ],
+    detailedContentEs: [
+      'Cuando su vehículo está involucrado en una colisión — incluso un choque menor — el módulo de control de airbag (también llamado módulo SRS o sensor de choque) registra el evento. Almacena datos de choque, registros de despliegue (si los airbags se activaron) y establece códigos de falla duros. Incluso después de que el vehículo es reparado y los airbags son reemplazados, la luz de advertencia SRS permanece encendida porque el módulo aún contiene este historial de choque.',
+      'La solución del concesionario es reemplazar todo el módulo — típicamente costando $800 a $2,000+ incluyendo partes y programación. Nuestro servicio de reseteo es una fracción de ese costo. Nos conectamos a su módulo de airbag usando herramientas de diagnóstico SRS especializadas, leemos los datos de choque almacenados, limpiamos el registro de choque y restauramos el módulo a su estado original de fábrica.',
+      'Este servicio es especialmente valioso para talleres de carrocería, instalaciones de reparación de seguros y propietarios de vehículos trabajando en autos con daño por colisión. Manejamos todos los fabricantes principales de módulos de airbag incluyendo Bosch, Continental, TRW, Autoliv, Denso y más. Ya sea que su vehículo tuvo un choque menor o una colisión más seria (donde los airbags se desplegaron), podemos resetear su módulo siempre que no esté físicamente dañado.',
+    ],
+    relatedSlugs: ['module-programming', 'ecu-programming', 'dodge-chrysler-vin-swap', 'mercedes-elv-steering-lock-repair'],
   },
   {
     slug: 'mercedes-elv-steering-lock-repair',
@@ -179,6 +292,33 @@ export const services: Service[] = [
     descriptionEs: 'La Cerradura Electrónica de Dirección (ELV) es un punto de falla conocido en los modelos Mercedes-Benz W204 Clase C, W207 Clase E Coupé y W212 Clase E. Cuando falla, el volante se bloquea y el auto no enciende. Reparamos y reemplazamos módulos ELV en el lugar, los programamos a su vehículo y restauramos la funcionalidad completa — sin necesidad de grúa al concesionario. Servicio en Aledo, TX y áreas cercanas.',
     icon: 'Car',
     image: '/images/smart-key-programming-luxury-car-aledo-tx.png',
+    features: [
+      'ELV motor and gear mechanism repair',
+      'Complete ELV module replacement and programming',
+      'Covers W204 C-Class, W207 E-Class Coupe, W212 E-Class',
+      'ESL (Electronic Steering Lock) emulator installation option',
+      'No flatbed tow required — we come to your vehicle',
+      'Same-day service in Aledo, TX and surrounding area',
+    ],
+    featuresEs: [
+      'Reparación de motor y mecanismo de engranaje ELV',
+      'Reemplazo completo y programación de módulo ELV',
+      'Cubre W204 Clase C, W207 Clase E Coupé, W212 Clase E',
+      'Opción de instalación de emulador ESL',
+      'Sin necesidad de grúa — vamos a su vehículo',
+      'Servicio el mismo día en Aledo, TX y área circundante',
+    ],
+    detailedContent: [
+      'The Mercedes-Benz Electronic Steering Lock (ELV) is an anti-theft device integrated into the steering column. It physically locks the steering wheel when the ignition is off and unlocks it when the vehicle\'s keyless-go system authenticates the smart key. Unfortunately, the ELV motor and internal gears are a well-documented weak point — especially on models manufactured between 2007 and 2014. The plastic gear teeth wear down over time, causing the lock to jam in either the locked or unlocked position.',
+      'When the ELV fails in the locked position, the steering wheel cannot turn and the vehicle will not start — even though the engine is mechanically fine. Mercedes dealers typically charge $1,500 to $3,000+ for an ELV replacement, and the car must be towed there since it cannot be driven. Our mobile technicians carry replacement ELV units and the specialized Mercedes diagnostic tools (XENTRY/DAS) needed to program the new module to your vehicle\'s electronic ignition system.',
+      'We offer two solutions depending on your preference and budget: a full OEM-quality ELV replacement with programming, or an ELV emulator that permanently bypasses the steering lock function while maintaining full compatibility with your vehicle\'s start system. Both options are completed on-site, typically within 2-3 hours, and restore your Mercedes to full driving condition without a trip to the dealership.',
+    ],
+    detailedContentEs: [
+      'La Cerradura Electrónica de Dirección (ELV) de Mercedes-Benz es un dispositivo antirrobo integrado en la columna de dirección. Bloquea físicamente el volante cuando la ignición está apagada y lo desbloquea cuando el sistema keyless-go autentica la llave inteligente. Desafortunadamente, el motor y engranajes internos del ELV son un punto débil bien documentado — especialmente en modelos fabricados entre 2007 y 2014. Los dientes de engranaje de plástico se desgastan con el tiempo.',
+      'Cuando el ELV falla en la posición bloqueada, el volante no puede girar y el vehículo no enciende — aunque el motor esté mecánicamente bien. Los concesionarios Mercedes típicamente cobran $1,500 a $3,000+ por un reemplazo de ELV, y el auto debe ser remolcado. Nuestros técnicos móviles llevan unidades ELV de reemplazo y las herramientas de diagnóstico Mercedes especializadas (XENTRY/DAS) necesarias.',
+      'Ofrecemos dos soluciones: un reemplazo ELV completo de calidad OEM con programación, o un emulador ELV que bypasea permanentemente la función de cerradura de dirección manteniendo compatibilidad completa con el sistema de arranque. Ambas opciones se completan en el lugar, típicamente en 2-3 horas, y restauran su Mercedes a condición completa de conducción sin visita al concesionario.',
+    ],
+    relatedSlugs: ['bmw-frm-repair', 'smart-key-programming', 'ecu-programming', 'module-programming'],
   },
   {
     slug: 'bmw-frm-repair',
@@ -191,6 +331,33 @@ export const services: Service[] = [
     descriptionEs: 'El FRM (Módulo de Piso) de BMW controla faros, luces traseras, direccionales, ventanas eléctricas y otras funciones eléctricas. Daño por agua, sobrecarga eléctrica o antigüedad pueden causar falla del FRM — provocando mal funcionamiento de luces y advertencias. Reparamos circuitos del FRM, reemplazamos componentes defectuosos y reprogramamos el módulo a su vehículo. Servicio en el lugar en Aledo, TX y dentro de 10 millas.',
     icon: 'Wrench',
     image: '/images/smart-key-programming-luxury-car-aledo-tx.png',
+    features: [
+      'FRM circuit board repair — capacitor, transistor, and trace repair',
+      'Used FRM module coding and programming to your vehicle',
+      'Headlight, tail light, and turn signal malfunction diagnosis',
+      'Power window and central locking fault resolution',
+      'Covers 1-Series, 3-Series, 5-Series, X1, X3, X5, and more',
+      'Mobile service — no BMW dealer visit needed',
+    ],
+    featuresEs: [
+      'Reparación de circuito FRM — capacitores, transistores y pistas',
+      'Codificación y programación de módulo FRM usado a su vehículo',
+      'Diagnóstico de mal funcionamiento de faros, luces traseras y direccionales',
+      'Resolución de fallas en ventanas eléctricas y cierre centralizado',
+      'Cubre Series 1, 3, 5, X1, X3, X5 y más',
+      'Servicio móvil — sin visita al concesionario BMW',
+    ],
+    detailedContent: [
+      'The BMW Footwell Module (FRM or FRM3) is located behind the kick panel on the driver\'s side and acts as the central hub for all exterior and some interior lighting, power windows, central locking, windshield wipers, and rain sensors. It is one of the most failure-prone modules in BMW vehicles, with common issues including water intrusion from blocked drains, electrical surges from jump-starting, and age-related component degradation on models from 2005-2017.',
+      'Symptoms of FRM failure are varied and often confusing: headlights that dim or flicker, tail lights that stay on when the car is off, turn signals that work intermittently, power windows that operate on their own, dashboard warning lights for multiple systems, and in severe cases, a complete loss of exterior lighting. Because the FRM controls so many functions, a single module failure can create a cascade of seemingly unrelated electrical problems.',
+      'Our repair process involves removing the FRM module, diagnosing the specific component failures on the circuit board under magnification, and performing precision soldering to replace blown capacitors, burnt transistors, or corroded traces. Once repaired, the module is reinstalled and coded to your vehicle using BMW ISTA diagnostic software. For cases where the module is beyond repair, we can source and program a used FRM to your vehicle — a process that requires VIN coding and module personalization.',
+    ],
+    detailedContentEs: [
+      'El Módulo de Piso BMW (FRM o FRM3) está ubicado detrás del panel del conductor y actúa como el centro para toda la iluminación exterior e interior, ventanas eléctricas, cierre centralizado, limpiaparabrisas y sensores de lluvia. Es uno de los módulos más propensos a fallas en vehículos BMW, con problemas comunes como intrusión de agua, sobrecarga eléctrica y degradación de componentes en modelos de 2005-2017.',
+      'Los síntomas de falla del FRM son variados: faros que se atenúan o parpadean, luces traseras que permanecen encendidas, direccionales intermitentes, ventanas que operan solas, múltiples luces de advertencia en el tablero, y en casos severos, pérdida completa de iluminación exterior. Debido a que el FRM controla tantas funciones, una sola falla puede crear una cascada de problemas eléctricos aparentemente no relacionados.',
+      'Nuestro proceso de reparación incluye remover el módulo FRM, diagnosticar las fallas específicas en el circuito bajo magnificación y realizar soldadura de precisión para reemplazar capacitores quemados, transistores dañados o pistas corroídas. Una vez reparado, el módulo se reinstala y codifica usando software de diagnóstico BMW ISTA. Para casos donde el módulo no tiene reparación, podemos conseguir y programar un FRM usado a su vehículo.',
+    ],
+    relatedSlugs: ['mercedes-elv-steering-lock-repair', 'module-programming', 'ecu-programming', 'smart-key-programming'],
   },
   {
     slug: 'saab-steering-lock-bypass',
@@ -203,6 +370,33 @@ export const services: Service[] = [
     descriptionEs: 'Los vehículos Saab son propensos a fallas en la cerradura de la columna de dirección que impiden que el auto encienda. En lugar de reemplazos costosos del concesionario, ofrecemos una solución profesional de bypass permanente que elimina el problema definitivamente. Nuestros técnicos manejan todos los modelos Saab y completan la reparación en el lugar. Servicio en Aledo, TX y el área circundante.',
     icon: 'Wrench',
     image: '/images/car-ignition-cylinder-repair-aledo-tx.png',
+    features: [
+      'Permanent steering column lock bypass — eliminates recurring failures',
+      'CIM (Column Integration Module) repair and replacement',
+      'Compatible with Saab 9-3 and 9-5 models (2003-2011)',
+      'No loss of vehicle functionality or security features',
+      'On-site repair completed in 1-2 hours',
+      'Significantly cheaper than Saab dealer replacement',
+    ],
+    featuresEs: [
+      'Bypass permanente de cerradura de columna — elimina fallas recurrentes',
+      'Reparación y reemplazo de CIM (Módulo de Integración de Columna)',
+      'Compatible con modelos Saab 9-3 y 9-5 (2003-2011)',
+      'Sin pérdida de funcionalidad o características de seguridad',
+      'Reparación en el lugar completada en 1-2 horas',
+      'Significativamente más económico que reemplazo del concesionario Saab',
+    ],
+    detailedContent: [
+      'Saab 9-3 and 9-5 vehicles equipped with the electronic steering column lock are notorious for a specific failure where the lock mechanism jams and prevents the ignition from turning. The dashboard displays a "Steering Locked" message and the car becomes completely immobile. This is caused by a faulty micro-switch and worn gear mechanism inside the Column Integration Module (CIM). The problem tends to worsen in cold weather and often starts as an intermittent issue before becoming permanent.',
+      'The original Saab dealer fix was to replace the entire CIM assembly — a part that was expensive even when Saab was still in production, and is now increasingly difficult to source since Saab ceased manufacturing. Our bypass solution involves professionally disabling the electronic lock function within the CIM while maintaining all other column functions (turn signals, wipers, ignition). This is a permanent, reliable fix that eliminates the possibility of the lock ever jamming again.',
+      'Many Saab owners in the Aledo and greater DFW area have been told their only option is a junkyard CIM — which often has the same failure waiting to happen. Our bypass is the preferred long-term solution among Saab enthusiasts and independent mechanics. The entire procedure is completed on-site at your location in about 1-2 hours, and your Saab will start reliably every time from that point forward.',
+    ],
+    detailedContentEs: [
+      'Los vehículos Saab 9-3 y 9-5 equipados con cerradura electrónica de columna de dirección son notorios por una falla específica donde el mecanismo se traba e impide que la ignición gire. El tablero muestra un mensaje de "Dirección Bloqueada" y el auto queda completamente inmóvil. Esto es causado por un micro-interruptor defectuoso y un mecanismo de engranaje desgastado dentro del Módulo de Integración de Columna (CIM).',
+      'La solución original del concesionario Saab era reemplazar todo el ensamble CIM — una parte que era costosa incluso cuando Saab aún estaba en producción, y ahora es cada vez más difícil de conseguir. Nuestra solución de bypass desactiva profesionalmente la función de cerradura electrónica dentro del CIM manteniendo todas las demás funciones de la columna (direccionales, limpiaparabrisas, ignición). Esta es una solución permanente y confiable.',
+      'Muchos propietarios de Saab en Aledo y el área de DFW han escuchado que su única opción es un CIM de deshuesadero — que frecuentemente tiene la misma falla esperando suceder. Nuestro bypass es la solución preferida a largo plazo entre entusiastas de Saab y mecánicos independientes. Todo el procedimiento se completa en su ubicación en aproximadamente 1-2 horas.',
+    ],
+    relatedSlugs: ['mercedes-elv-steering-lock-repair', 'ignition-repair', 'gm-vats-bypass', 'module-programming'],
   },
   {
     slug: 'gm-vats-bypass',
@@ -215,6 +409,33 @@ export const services: Service[] = [
     descriptionEs: 'El sistema VATS (Sistema Antirrobo de Vehículos) y PassKey de GM usa llaves con chip resistivo para prevenir robos. Con el tiempo, el sistema puede fallar, causando condiciones de no arranque y bloqueos de seguridad. Proporcionamos servicios profesionales de bypass y desactivación de VATS que resuelven estos problemas permanentemente. Funciona en todos los vehículos GM incluyendo Chevrolet, Pontiac, Buick, Cadillac y Oldsmobile. Servicio en el lugar en Aledo, TX y áreas cercanas.',
     icon: 'Key',
     image: '/images/mobile-key-programming-workstation-aledo-tx.png',
+    features: [
+      'VATS (Vehicle Anti-Theft System) bypass and permanent disable',
+      'PassKey, PassKey II, and PassKey III system service',
+      'Resistor pellet key and sensor diagnosis',
+      'Eliminates intermittent no-start and security lockout issues',
+      'All GM brands — Chevrolet, Pontiac, Buick, Cadillac, Oldsmobile',
+      'On-site service with same-day completion',
+    ],
+    featuresEs: [
+      'Bypass y desactivación permanente de VATS',
+      'Servicio de sistemas PassKey, PassKey II y PassKey III',
+      'Diagnóstico de llave con pellet resistivo y sensor',
+      'Elimina problemas intermitentes de no arranque y bloqueo de seguridad',
+      'Todas las marcas GM — Chevrolet, Pontiac, Buick, Cadillac, Oldsmobile',
+      'Servicio en el lugar con finalización el mismo día',
+    ],
+    detailedContent: [
+      'General Motors introduced the VATS (Vehicle Anti-Theft System) in the late 1980s and continued using variations — PassKey, PassKey II, and PassKey III — through the 2000s. The system works by reading a tiny resistor pellet embedded in the key blade. If the resistance value doesn\'t match what the VATS module expects, the fuel injectors and starter are disabled for several minutes. While effective as an anti-theft measure, these systems are now decades old and the resistor contacts, key pellets, and wiring are prone to failure.',
+      'The most common symptom is an intermittent or complete no-start condition where the "SECURITY" or "THEFT" light illuminates on the dashboard. The car cranks but won\'t fire, and you\'re stuck waiting 10-15 minutes for the security lockout to reset — only for it to happen again. This is caused by worn contacts in the ignition lock cylinder that can no longer reliably read the key\'s resistor, corroded wiring between the lock cylinder and the VATS module, or a failing VATS module itself.',
+      'Our VATS bypass service professionally disables the anti-theft system while maintaining full vehicle functionality. We install a precision resistor module that provides the correct resistance value to the VATS controller at all times, eliminating the intermittent reading failures that cause no-start conditions. This is a clean, permanent solution that restores reliable starting every time. The entire process is completed on-site at your location in Aledo, TX — typically in about one hour.',
+    ],
+    detailedContentEs: [
+      'General Motors introdujo el VATS (Sistema Antirrobo de Vehículos) a finales de los años 80 y continuó usando variaciones — PassKey, PassKey II y PassKey III — hasta los 2000. El sistema funciona leyendo un pequeño pellet resistivo incrustado en la hoja de la llave. Si el valor de resistencia no coincide con lo que el módulo VATS espera, los inyectores de combustible y el arranque se desactivan por varios minutos.',
+      'El síntoma más común es una condición de no arranque intermitente o completa donde la luz "SECURITY" o "THEFT" se ilumina en el tablero. El auto gira pero no enciende, y usted queda esperando 10-15 minutos para que el bloqueo se reinicie. Esto es causado por contactos desgastados en el cilindro de ignición, cableado corroído o un módulo VATS fallido.',
+      'Nuestro servicio de bypass VATS desactiva profesionalmente el sistema antirrobo manteniendo la funcionalidad completa del vehículo. Instalamos un módulo de resistencia de precisión que proporciona el valor correcto al controlador VATS en todo momento, eliminando las fallas de lectura intermitente. Esta es una solución limpia y permanente que restaura el arranque confiable cada vez. El proceso se completa en su ubicación en Aledo, TX — típicamente en una hora.',
+    ],
+    relatedSlugs: ['ignition-repair', 'transponder-key-programming', 'saab-steering-lock-bypass', 'ecu-programming'],
   },
   {
     slug: 'dodge-chrysler-win-module',
@@ -227,6 +448,33 @@ export const services: Service[] = [
     descriptionEs: 'El módulo WIN (Nodo de Ignición Inalámbrico) en vehículos Dodge y Chrysler maneja la ignición sin llave y la comunicación FOBIK. Cuando falla, su vehículo no reconoce el control remoto ni enciende. Reemplazamos módulos WIN, programamos llaves FOBIK y restauramos la función de ignición completa en el lugar. Todos los modelos Dodge, Chrysler y Jeep soportados. Servicio en Aledo, TX y dentro de un radio de 10 millas.',
     icon: 'Radio',
     image: '/images/key-fob-programming-service-aledo-tx.png',
+    features: [
+      'WIN (Wireless Ignition Node) module replacement and programming',
+      'FOBIK key programming — new keys and all-keys-lost',
+      'Ignition system diagnostics and fault clearing',
+      'Covers Dodge Ram, Charger, Challenger, Durango, Grand Cherokee & more',
+      'Chrysler 300, Town & Country, Pacifica support',
+      'Mobile service — no dealer appointment required',
+    ],
+    featuresEs: [
+      'Reemplazo y programación de módulo WIN (Nodo de Ignición Inalámbrico)',
+      'Programación de llave FOBIK — llaves nuevas y todas las llaves perdidas',
+      'Diagnóstico de sistema de ignición y limpieza de fallas',
+      'Cubre Dodge Ram, Charger, Challenger, Durango, Grand Cherokee y más',
+      'Soporte para Chrysler 300, Town & Country, Pacifica',
+      'Servicio móvil — sin cita al concesionario',
+    ],
+    detailedContent: [
+      'The WIN (Wireless Ignition Node) is a Chrysler/Stellantis-specific module located in the steering column that replaces the traditional ignition lock cylinder. Instead of inserting a key, you place your FOBIK (a combination key fob and ignition key) near the WIN module and press the start button. The WIN communicates with the FOBIK over radio frequency, verifies its identity with the vehicle\'s SKREEM (Sentry Key Remote Entry Module), and authorizes the engine to start.',
+      'WIN module failures are a well-known issue on Dodge and Chrysler vehicles from 2008 onward. Symptoms include the vehicle not recognizing the FOBIK, a "Key Not Detected" message on the dashboard, intermittent starting failures, and in some cases the vehicle starting on its own or not shutting off properly. The WIN module can fail due to internal circuit board issues, connector corrosion, or software glitches. When it fails, even brand-new FOBIK keys won\'t work until the module is replaced and programmed.',
+      'Our service includes WIN module replacement, FOBIK key programming (including all-keys-lost scenarios), and full system verification. We carry WIN modules for the most common Dodge and Chrysler models in our mobile unit and use wiTECH-level diagnostic tools to program and configure the module to your specific vehicle. The entire process — module swap, FOBIK programming, and system test — is typically completed in 1-2 hours at your location in Aledo, TX.',
+    ],
+    detailedContentEs: [
+      'El WIN (Nodo de Ignición Inalámbrico) es un módulo específico de Chrysler/Stellantis ubicado en la columna de dirección que reemplaza el cilindro de ignición tradicional. En lugar de insertar una llave, coloca su FOBIK (una combinación de control remoto y llave de ignición) cerca del módulo WIN y presiona el botón de arranque. El WIN se comunica con el FOBIK por radiofrecuencia, verifica su identidad con el SKREEM del vehículo y autoriza el encendido del motor.',
+      'Las fallas del módulo WIN son un problema conocido en vehículos Dodge y Chrysler desde 2008. Los síntomas incluyen que el vehículo no reconoce el FOBIK, un mensaje de "Llave No Detectada" en el tablero, fallas de arranque intermitentes, y en algunos casos el vehículo arrancando solo o no apagándose correctamente. El módulo WIN puede fallar por problemas en el circuito, corrosión de conectores o errores de software.',
+      'Nuestro servicio incluye reemplazo de módulo WIN, programación de llave FOBIK (incluyendo escenarios donde se perdieron todas las llaves), y verificación completa del sistema. Llevamos módulos WIN para los modelos más comunes de Dodge y Chrysler en nuestra unidad móvil y usamos herramientas de diagnóstico de nivel wiTECH. Todo el proceso — cambio de módulo, programación FOBIK y prueba del sistema — se completa típicamente en 1-2 horas en su ubicación en Aledo, TX.',
+    ],
+    relatedSlugs: ['dodge-chrysler-vin-swap', 'key-fob-programming', 'smart-key-programming', 'module-programming'],
   },
   {
     slug: 'dodge-chrysler-vin-swap',
@@ -239,6 +487,33 @@ export const services: Service[] = [
     descriptionEs: 'Al reemplazar un módulo de control (PCM, BCM o clúster de instrumentos) en un vehículo Dodge, Chrysler o Jeep, el nuevo módulo debe tener el VIN correcto programado para comunicarse con el resto de los sistemas del vehículo. Proporcionamos escritura profesional de VIN, sincronización de módulos y programación de llaves para todos los modelos Dodge/Chrysler/Jeep. Sin necesidad de cita en el concesionario — vamos a usted en Aledo, TX y áreas circundantes.',
     icon: 'FileText',
     image: '/images/mobile-key-programming-workstation-aledo-tx.png',
+    features: [
+      'VIN writing to replacement PCM, BCM, and instrument clusters',
+      'Module-to-module synchronization after swap',
+      'Key re-learning and immobilizer pairing with new modules',
+      'Mileage correction on replacement instrument clusters',
+      'All Dodge, Chrysler, Jeep, and Ram models supported',
+      'wiTECH-level programming at your location',
+    ],
+    featuresEs: [
+      'Escritura de VIN en PCM, BCM y clústeres de instrumentos de reemplazo',
+      'Sincronización módulo a módulo después del cambio',
+      'Re-aprendizaje de llaves y emparejamiento de inmovilizador con nuevos módulos',
+      'Corrección de kilometraje en clústeres de instrumentos de reemplazo',
+      'Todos los modelos Dodge, Chrysler, Jeep y Ram soportados',
+      'Programación de nivel wiTECH en su ubicación',
+    ],
+    detailedContent: [
+      'Dodge, Chrysler, Jeep, and Ram vehicles use a networked system where every major control module — the PCM (Powertrain Control Module), BCM (Body Control Module), instrument cluster, TIPM (Totally Integrated Power Module), and WIN module — must share the same VIN and security credentials. When any of these modules is replaced with a new or used unit, it arrives with a different VIN or no VIN at all. The vehicle will not function correctly until the replacement module is programmed with the correct VIN and synchronized with the rest of the network.',
+      'This process requires Chrysler\'s proprietary wiTECH diagnostic platform and a secure internet connection to Stellantis\'s servers. Many independent repair shops do not have wiTECH access, which means they physically install the module but cannot complete the programming step. Our mobile technicians carry the full wiTECH setup and maintain active subscriptions, allowing us to perform VIN writes, module configurations, and security key learning at any location.',
+      'Common scenarios include: replacing a failed PCM and needing VIN + immobilizer programming, swapping a BCM due to electrical damage and needing key re-learning, installing a used instrument cluster and needing mileage and VIN correction, and replacing a TIPM that controls fuel pump and relay functions. We handle all of these on-site in Aledo, TX with same-day service in most cases.',
+    ],
+    detailedContentEs: [
+      'Los vehículos Dodge, Chrysler, Jeep y Ram usan un sistema en red donde cada módulo de control mayor — el PCM (Módulo de Control del Tren Motriz), BCM (Módulo de Control de Carrocería), clúster de instrumentos, TIPM (Módulo de Potencia Totalmente Integrado) y módulo WIN — deben compartir el mismo VIN y credenciales de seguridad. Cuando cualquiera de estos módulos se reemplaza con una unidad nueva o usada, llega con un VIN diferente o sin VIN.',
+      'Este proceso requiere la plataforma de diagnóstico propietaria wiTECH de Chrysler y una conexión segura a internet a los servidores de Stellantis. Muchos talleres independientes no tienen acceso a wiTECH, lo que significa que instalan físicamente el módulo pero no pueden completar el paso de programación. Nuestros técnicos móviles llevan la configuración completa de wiTECH y mantienen suscripciones activas.',
+      'Los escenarios comunes incluyen: reemplazar un PCM fallido y necesitar programación de VIN + inmovilizador, cambiar un BCM por daño eléctrico y necesitar re-aprendizaje de llaves, instalar un clúster de instrumentos usado y necesitar corrección de kilometraje y VIN, y reemplazar un TIPM que controla la bomba de combustible y funciones de relé. Manejamos todo esto en el lugar en Aledo, TX con servicio el mismo día en la mayoría de los casos.',
+    ],
+    relatedSlugs: ['dodge-chrysler-win-module', 'module-programming', 'ecu-programming', 'key-fob-programming'],
   },
   {
     slug: 'performance-tuning',
@@ -251,6 +526,33 @@ export const services: Service[] = [
     descriptionEs: 'Libere todo el potencial de su vehículo con remapeo profesional de ECU y afinación de rendimiento. Ajustamos mapas de combustible, tiempo de ignición, presión de turbo y otros parámetros para entregar ganancias notables en caballos de fuerza, torque y respuesta del acelerador — manteniendo la confiabilidad. Afinaciones personalizadas disponibles para todas las marcas y modelos incluyendo camionetas, deportivos y vehículos diésel. Servicio en Aledo, TX y áreas cercanas.',
     icon: 'Zap',
     image: '/images/smart-key-diagnostic-tablet-aledo-tx.png',
+    features: [
+      'Custom ECU remapping for horsepower and torque gains',
+      'Fuel map optimization for better fuel economy',
+      'Turbo boost pressure and timing adjustments',
+      'Speed limiter and rev limiter removal',
+      'Diesel performance tuning and DPF solutions',
+      'Dyno-verified tunes — trucks, sports cars, and daily drivers',
+    ],
+    featuresEs: [
+      'Remapeo personalizado de ECU para ganancias de potencia y torque',
+      'Optimización de mapas de combustible para mejor economía',
+      'Ajustes de presión de turbo y tiempo de ignición',
+      'Eliminación de limitador de velocidad y revoluciones',
+      'Afinación de rendimiento diésel y soluciones DPF',
+      'Afinaciones verificadas en dinamómetro — camionetas, deportivos y uso diario',
+    ],
+    detailedContent: [
+      'Every vehicle\'s ECU comes programmed with conservative factory settings designed to meet emissions regulations, account for the lowest-quality fuel, and accommodate all climate conditions worldwide. This means your engine is deliberately detuned from the factory — leaving significant performance on the table. ECU remapping (also called "chipping" or "tuning") adjusts the software parameters within your engine\'s computer to optimize performance for your specific fuel quality, climate, and driving preferences.',
+      'Our performance tuning service modifies key ECU parameters including fuel injection timing and duration, ignition advance curves, turbocharger boost pressure maps (for forced-induction engines), throttle response mapping, and transmission shift points (on automatic vehicles). The result is a noticeable improvement in power delivery, acceleration, and overall driveability. Typical gains range from 15-30% more horsepower and torque on turbocharged engines, and 5-15% on naturally aspirated engines. Many customers also report improved fuel economy at highway speeds due to optimized fuel mapping.',
+      'We offer several tuning levels: an economy tune focused on maximizing fuel efficiency, a balanced street tune that improves both performance and economy, and an aggressive performance tune for maximum power. All our tunes are developed with reliability in mind — we never push beyond safe limits for your engine\'s internals. For diesel trucks, we also offer DPF (Diesel Particulate Filter) and EGR (Exhaust Gas Recirculation) solutions. Mobile service available in Aledo, TX and surrounding areas.',
+    ],
+    detailedContentEs: [
+      'Cada ECU de vehículo viene programada con configuraciones conservadoras de fábrica diseñadas para cumplir regulaciones de emisiones, usar el combustible de menor calidad y acomodar todas las condiciones climáticas del mundo. Esto significa que su motor está deliberadamente limitado de fábrica — dejando rendimiento significativo sin usar. El remapeo de ECU (también llamado "afinación" o "chipping") ajusta los parámetros de software dentro de la computadora de su motor para optimizar el rendimiento.',
+      'Nuestro servicio de afinación de rendimiento modifica parámetros clave de la ECU incluyendo tiempo y duración de inyección de combustible, curvas de avance de ignición, mapas de presión de turbo (para motores turboalimentados), mapeo de respuesta del acelerador y puntos de cambio de transmisión (en vehículos automáticos). El resultado es una mejora notable en la entrega de potencia, aceleración y conducción general. Las ganancias típicas van del 15-30% más de potencia en motores turbo, y 5-15% en motores aspirados naturalmente.',
+      'Ofrecemos varios niveles de afinación: una afinación de economía enfocada en maximizar la eficiencia de combustible, una afinación equilibrada que mejora rendimiento y economía, y una afinación agresiva para máxima potencia. Todas nuestras afinaciones se desarrollan con confiabilidad en mente — nunca empujamos más allá de límites seguros. Para camionetas diésel, también ofrecemos soluciones de DPF y EGR. Servicio móvil disponible en Aledo, TX y áreas circundantes.',
+    ],
+    relatedSlugs: ['ecu-programming', 'module-programming', 'vw-immo-off', 'smart-key-programming'],
   },
   {
     slug: 'vw-immo-off',
@@ -263,6 +565,33 @@ export const services: Service[] = [
     descriptionEs: 'Necesita cambiar una ECU en su VW o Audi sin pasar por el proceso de emparejamiento del inmovilizador del concesionario? Nuestro servicio IMMO OFF elimina la función del inmovilizador de la ECU, permitiéndole funcionar sin sincronización de llave a ECU. Ideal para cambios de ECU, configuraciones de motor independiente, builds de carreras y situaciones donde se perdieron todas las llaves y se necesita una nueva ECU. Servicio en Aledo, TX y áreas circundantes.',
     icon: 'ShieldOff',
     image: '/images/mobile-key-programming-workstation-aledo-tx.png',
+    features: [
+      'IMMO OFF / immobilizer delete for VW and Audi ECUs',
+      'ECU swap support without dealer immobilizer pairing',
+      'Covers Bosch ME7, MED9, EDC15, EDC16, EDC17 and more',
+      'Ideal for engine swaps, race builds, and standalone setups',
+      'All-keys-lost ECU replacement solution',
+      'On-site service with same-day turnaround',
+    ],
+    featuresEs: [
+      'IMMO OFF / eliminación de inmovilizador para ECUs VW y Audi',
+      'Soporte de cambio de ECU sin emparejamiento de inmovilizador del concesionario',
+      'Cubre Bosch ME7, MED9, EDC15, EDC16, EDC17 y más',
+      'Ideal para cambios de motor, builds de carreras y configuraciones independientes',
+      'Solución de reemplazo de ECU cuando se pierden todas las llaves',
+      'Servicio en el lugar con finalización el mismo día',
+    ],
+    detailedContent: [
+      'Volkswagen and Audi vehicles use a sophisticated immobilizer system that pairs the ECU to a specific set of keys through the instrument cluster. When the key is inserted (or the smart key is detected), the cluster sends an encrypted challenge to the key\'s transponder, which responds with a code that the ECU validates before allowing the engine to start. This multi-layer security system is excellent for preventing theft, but it creates significant complications when an ECU needs to be replaced — especially if the original keys are unavailable.',
+      'The IMMO OFF service modifies the ECU\'s firmware to disable the immobilizer verification step. After this modification, the ECU will start the engine without checking for a paired transponder key. This is invaluable in several situations: when you\'re installing a used ECU from a different vehicle (which is paired to different keys), when building a standalone engine setup for a kit car or race vehicle, when all original keys have been lost and you need to get the vehicle running with a new ECU, or when the instrument cluster (which handles immobilizer communication) has failed and cannot be replaced cost-effectively.',
+      'We support all major VW/Audi ECU types including Bosch ME7.x, MED9.x, EDC15, EDC16, EDC17, Siemens/Continental Simos, and Magneti Marelli units. The modification is performed by reading the ECU\'s firmware, patching the immobilizer routines, and writing the modified firmware back — all done on the bench or in-vehicle depending on the ECU type. The process typically takes 1-3 hours and is performed at your location in Aledo, TX. After IMMO OFF, you can use any compatible key blade to start the vehicle.',
+    ],
+    detailedContentEs: [
+      'Los vehículos Volkswagen y Audi usan un sistema de inmovilizador sofisticado que empareja la ECU con un conjunto específico de llaves a través del clúster de instrumentos. Cuando la llave se inserta (o la llave inteligente es detectada), el clúster envía un desafío encriptado al transponder de la llave, que responde con un código que la ECU valida antes de permitir el arranque del motor. Este sistema de seguridad multi-capa es excelente para prevenir robos, pero crea complicaciones significativas cuando una ECU necesita ser reemplazada.',
+      'El servicio IMMO OFF modifica el firmware de la ECU para desactivar el paso de verificación del inmovilizador. Después de esta modificación, la ECU arrancará el motor sin verificar una llave transponder emparejada. Esto es invaluable en varias situaciones: al instalar una ECU usada de un vehículo diferente, al construir una configuración de motor independiente para un auto de carreras, cuando se perdieron todas las llaves originales, o cuando el clúster de instrumentos ha fallado.',
+      'Soportamos todos los tipos principales de ECU VW/Audi incluyendo Bosch ME7.x, MED9.x, EDC15, EDC16, EDC17, Siemens/Continental Simos, y unidades Magneti Marelli. La modificación se realiza leyendo el firmware de la ECU, parcheando las rutinas del inmovilizador y escribiendo el firmware modificado — todo hecho en banco o en el vehículo dependiendo del tipo de ECU. El proceso típicamente toma 1-3 horas y se realiza en su ubicación en Aledo, TX.',
+    ],
+    relatedSlugs: ['ecu-programming', 'performance-tuning', 'transponder-key-programming', 'module-programming'],
   },
 ]
 
