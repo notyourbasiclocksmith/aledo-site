@@ -17,6 +17,7 @@ export default function Footer({ lang, dict }: FooterProps) {
     { href: prefix, label: dict.nav.home },
     { href: `${prefix}/${svcBase}`, label: dict.nav.services },
     { href: `${prefix}/${lang === 'en' ? 'service-area' : 'area-de-servicio'}`, label: dict.nav.serviceArea },
+    { href: `${prefix}/${lang === 'en' ? 'locksmith-near-me' : 'cerrajero-cerca-de-mi'}`, label: dict.nav.nearMe },
     { href: `${prefix}/${lang === 'en' ? 'about' : 'acerca'}`, label: dict.nav.about },
     { href: `${prefix}/${lang === 'en' ? 'contact' : 'contacto'}`, label: dict.nav.contact },
   ]
