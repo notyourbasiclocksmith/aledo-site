@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { services } from '@/lib/services'
+import { cities } from '@/lib/cities'
 
 const baseUrl = 'https://aledolocksmith.net'
 
@@ -40,5 +41,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  return [...staticEn, ...staticEs, ...serviceEn, ...serviceEs]
+  const nearMeEn: MetadataRoute.Sitemap = services.flatMap((s) =>
+    cities.map((c) => ({
+      url: `${baseUrl}/en/near-me/${s.slug}/${c.slug}/`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  )
+
+  const nearMeEs: MetadataRoute.Sitemap = services.flatMap((s) =>
+    cities.map((c) => ({
+      url: `${baseUrl}/es/cerca-de-mi/${s.slug}/${c.slugEs}/`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  )
+
+  return [...staticEn, ...staticEs, ...serviceEn, ...serviceEs, ...nearMeEn, ...nearMeEs]
 }
