@@ -42,16 +42,15 @@ export default function ContactPage({ params }: { params: { lang: Locale } }) {
   const isEn = lang === 'en'
   const prefix = `/${lang}`
 
-  const localBusinessSchema = {
+  const speakableSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Locksmith',
-    name: 'Aledo Locksmith',
-    url: baseUrl,
-    telephone: CALL_NUMBER,
-    address: { '@type': 'PostalAddress', addressLocality: 'Aledo', addressRegion: 'TX', postalCode: '76008', addressCountry: 'US' },
-    geo: { '@type': 'GeoCoordinates', latitude: 32.6960, longitude: -97.6023 },
-    areaServed: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 32.6960, longitude: -97.6023 }, geoRadius: '16093' },
-    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+    '@type': 'WebPage',
+    name: isEn ? 'Contact Aledo Locksmith' : 'Contactar Aledo Locksmith',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.contact-methods'],
+    },
+    url: `${baseUrl}/${lang}/${isEn ? 'contact' : 'contacto'}`,
   }
 
   const breadcrumbSchema = {
@@ -65,7 +64,7 @@ export default function ContactPage({ params }: { params: { lang: Locale } }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}

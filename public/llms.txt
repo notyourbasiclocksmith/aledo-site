@@ -46,16 +46,51 @@
 - Pricing: Upfront quotes before work begins, no hidden fees
 - Equipment: Dealer-level diagnostic tools, J2534 pass-through programming, OEM manufacturer software subscriptions
 
-## Pages
+## Pages (English)
 - [Homepage](https://aledolocksmith.net/en/)
-- [All Services](https://aledolocksmith.net/en/services/)
+- [All Services (21)](https://aledolocksmith.net/en/services/)
 - [Locksmith Near Me](https://aledolocksmith.net/en/locksmith-near-me/)
 - [Service Area](https://aledolocksmith.net/en/service-area/)
 - [About](https://aledolocksmith.net/en/about/)
 - [Contact](https://aledolocksmith.net/en/contact/)
-- [Página Principal (Español)](https://aledolocksmith.net/es/)
-- [Servicios (Español)](https://aledolocksmith.net/es/servicios/)
+- [FAQ](https://aledolocksmith.net/en/faq/)
+
+## Pages (Spanish / Español)
+- [Página Principal](https://aledolocksmith.net/es/)
+- [Todos los Servicios](https://aledolocksmith.net/es/servicios/)
 - [Cerrajero Cerca de Mí](https://aledolocksmith.net/es/cerrajero-cerca-de-mi/)
+- [Área de Servicio](https://aledolocksmith.net/es/area-de-servicio/)
+- [Acerca](https://aledolocksmith.net/es/acerca/)
+- [Contacto](https://aledolocksmith.net/es/contacto/)
+- [Preguntas Frecuentes](https://aledolocksmith.net/es/preguntas-frecuentes/)
+
+## Near Me Pages (by city)
+We have dedicated pages for each service in each nearby city:
+- [Car Lockout in Aledo](https://aledolocksmith.net/en/near-me/car-lockout/aledo/)
+- [Car Lockout in Willow Park](https://aledolocksmith.net/en/near-me/car-lockout/willow-park/)
+- [Car Key Replacement in Hudson Oaks](https://aledolocksmith.net/en/near-me/car-key-replacement/hudson-oaks/)
+- [Key Fob Programming in Walsh](https://aledolocksmith.net/en/near-me/key-fob-programming/walsh/)
+- [Key Fob Programming in Annetta](https://aledolocksmith.net/en/near-me/key-fob-programming/annetta/)
+- [ECU Programming in Weatherford](https://aledolocksmith.net/en/near-me/ecu-programming/weatherford/)
+- [Car Lockout in Fort Worth West](https://aledolocksmith.net/en/near-me/car-lockout/fort-worth-west/)
+- ... and 140+ more combinations (21 services × 7 cities) available at /en/near-me/[service-slug]/[city-slug]/
+
+## Cities Served
+- Aledo, TX 76008 (home base, 15-20 min response)
+- Willow Park, TX 76087 (15-25 min response)
+- Annetta, TX 76008 (15-25 min response)
+- Hudson Oaks, TX 76087 (20-30 min response)
+- Walsh, TX 76008 (15-25 min response)
+- Weatherford, TX 76086 (25-35 min response, eastern portions)
+- Fort Worth West, TX 76126 (20-30 min response)
+
+## Entity Information
+- Type: Local Business / Locksmith
+- Industry: Automotive Locksmith
+- Specialty: Mobile automotive locksmith — car lockouts, key replacement, fob programming, ECU/module programming, European vehicle specialties
+- Differentiators: Mobile (we come to you), dealer-level tools, bilingual (English/Spanish), 24/7, no tow needed, upfront pricing
+- Founded location: Aledo, TX
+- Service model: Mobile — all work performed on-site at customer location
 
 ## Frequently Asked Questions
 

@@ -27,39 +27,6 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
   const prefix = `/${lang}`
   const svcBase = lang === 'en' ? 'services' : 'servicios'
 
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Locksmith',
-    '@id': `${baseUrl}/#organization`,
-    name: 'Aledo Locksmith',
-    alternateName: 'Aledo Locksmith Services',
-    url: baseUrl,
-    logo: `${baseUrl}/images/new-car-keys-replacement-aledo-tx.png`,
-    image: [`${baseUrl}/images/car-lockout-service-aledo-tx.png`, `${baseUrl}/images/mobile-locksmith-service-van-aledo-tx.png`, `${baseUrl}/images/key-fob-programming-service-aledo-tx.png`],
-    telephone: CALL_NUMBER,
-    email: 'contact@aledolocksmith.net',
-    description: dict.meta.defaultDescription,
-    priceRange: '$$',
-    address: { '@type': 'PostalAddress', addressLocality: 'Aledo', addressRegion: 'TX', addressCountry: 'US' },
-    geo: { '@type': 'GeoCoordinates', latitude: 32.6960, longitude: -97.6023 },
-    areaServed: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 32.6960, longitude: -97.6023 }, geoRadius: '16093' },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: lang === 'en' ? 'Locksmith Services' : 'Servicios de Cerrajería',
-      itemListElement: services.slice(0, 5).map((s) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: lang === 'en' ? s.name : s.nameEs,
-          description: lang === 'en' ? s.shortDesc : s.shortDescEs,
-        },
-      })),
-    },
-    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
-    paymentAccepted: 'Cash, Credit Card, Debit Card',
-    currenciesAccepted: 'USD',
-  }
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -68,6 +35,25 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
       name: item.q,
       acceptedAnswer: { '@type': 'Answer', text: item.a },
     })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: lang === 'en' ? 'Home' : 'Inicio', item: `${baseUrl}/${lang}` },
+    ],
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: dict.meta.defaultTitle,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.trust-bar', '.hero-subtitle'],
+    },
+    url: `${baseUrl}/${lang}`,
   }
 
   const iconMap: Record<string, React.ReactNode> = {
@@ -81,8 +67,9 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-secondary text-white py-20 md:py-28 overflow-hidden">

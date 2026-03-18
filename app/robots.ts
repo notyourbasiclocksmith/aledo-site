@@ -17,11 +17,27 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'GoogleOther',
+        allow: '/',
+      },
+      {
+        userAgent: 'GoogleOther-Image',
+        allow: '/',
+      },
+      {
         userAgent: 'ClaudeBot',
         allow: '/',
       },
       {
         userAgent: 'Claude-Web',
+        allow: '/',
+      },
+      {
+        userAgent: 'anthropic-ai',
         allow: '/',
       },
       {
@@ -33,11 +49,23 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        userAgent: 'GoogleOther',
+        userAgent: 'cohere-ai',
         allow: '/',
       },
       {
-        userAgent: 'cohere-ai',
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
+      },
+      {
+        userAgent: 'YouBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
         allow: '/',
       },
     ],
