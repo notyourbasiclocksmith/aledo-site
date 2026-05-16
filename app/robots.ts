@@ -68,6 +68,18 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'OAI-SearchBot',
         allow: '/',
       },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'FacebookBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Diffbot',
+        allow: '/',
+      },
     ],
     sitemap: 'https://aledolocksmith.net/sitemap.xml',
   }
